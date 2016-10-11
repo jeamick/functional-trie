@@ -16,7 +16,7 @@ const Vertex = require('functional-trie')
 var vertex = new Vertex()
 
 // now lets add an edge to the vertex named "bob" that points to another vertex with the value "alice"
-vertex = vertex.set('friend', 'alice')
+vertex = vertex.set('friend', new Vertex('alice'))
 
 // if paths have more than one name in them they can arrays
 vertex = vertex.set(['friend', 'brother'], new Vertex('bob'))
