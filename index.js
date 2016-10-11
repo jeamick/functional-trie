@@ -154,7 +154,7 @@ module.exports = class Vertex {
   }
 
   /**
-   * Does a depth first iteration of the graph
+   * Does a depth first iteration of the trie
    */
   * [Symbol.iterator ] () {
     yield this
