@@ -2,13 +2,13 @@
 
 # index
 
-[index.js:4-148](https://github.com/wanderer/functional-dag/blob/d522d82d6eb0e39471ce61cd5225a49c689ac529/index.js#L4-L148 "Source code on GitHub")
+[index.js:4-155](https://github.com/wanderer/functional-trie/blob/77f6650eaf21cf613e74bd94aae3cc72b9b57e8c/index.js#L4-L155 "Source code on GitHub")
 
 A very generic functional trie implemention
 
 ## constructor
 
-[index.js:11-14](https://github.com/wanderer/functional-dag/blob/d522d82d6eb0e39471ce61cd5225a49c689ac529/index.js#L11-L14 "Source code on GitHub")
+[index.js:11-14](https://github.com/wanderer/functional-trie/blob/77f6650eaf21cf613e74bd94aae3cc72b9b57e8c/index.js#L11-L14 "Source code on GitHub")
 
 Create a new vertex
 
@@ -19,15 +19,23 @@ Create a new vertex
 
 ## value
 
-[index.js:19-21](https://github.com/wanderer/functional-dag/blob/d522d82d6eb0e39471ce61cd5225a49c689ac529/index.js#L19-L21 "Source code on GitHub")
+[index.js:19-21](https://github.com/wanderer/functional-trie/blob/77f6650eaf21cf613e74bd94aae3cc72b9b57e8c/index.js#L19-L21 "Source code on GitHub")
 
 **Properties**
 
 -   `value` **any** the value of the vertex
 
+## edges
+
+[index.js:26-28](https://github.com/wanderer/functional-trie/blob/77f6650eaf21cf613e74bd94aae3cc72b9b57e8c/index.js#L26-L28 "Source code on GitHub")
+
+**Properties**
+
+-   `the` **any** edges of the vertex
+
 ## root
 
-[index.js:26-32](https://github.com/wanderer/functional-dag/blob/d522d82d6eb0e39471ce61cd5225a49c689ac529/index.js#L26-L32 "Source code on GitHub")
+[index.js:33-39](https://github.com/wanderer/functional-trie/blob/77f6650eaf21cf613e74bd94aae3cc72b9b57e8c/index.js#L33-L39 "Source code on GitHub")
 
 **Properties**
 
@@ -35,7 +43,7 @@ Create a new vertex
 
 ## isEmpty
 
-[index.js:37-39](https://github.com/wanderer/functional-dag/blob/d522d82d6eb0e39471ce61cd5225a49c689ac529/index.js#L37-L39 "Source code on GitHub")
+[index.js:44-46](https://github.com/wanderer/functional-trie/blob/77f6650eaf21cf613e74bd94aae3cc72b9b57e8c/index.js#L44-L46 "Source code on GitHub")
 
 **Properties**
 
@@ -43,7 +51,7 @@ Create a new vertex
 
 ## set
 
-[index.js:46-52](https://github.com/wanderer/functional-dag/blob/d522d82d6eb0e39471ce61cd5225a49c689ac529/index.js#L46-L52 "Source code on GitHub")
+[index.js:53-59](https://github.com/wanderer/functional-trie/blob/77f6650eaf21cf613e74bd94aae3cc72b9b57e8c/index.js#L53-L59 "Source code on GitHub")
 
 Set an edge on a given path to the given the vertex
 
@@ -55,7 +63,7 @@ Set an edge on a given path to the given the vertex
 
 ## update
 
-[index.js:60-88](https://github.com/wanderer/functional-dag/blob/d522d82d6eb0e39471ce61cd5225a49c689ac529/index.js#L60-L88 "Source code on GitHub")
+[index.js:67-95](https://github.com/wanderer/functional-trie/blob/77f6650eaf21cf613e74bd94aae3cc72b9b57e8c/index.js#L67-L95 "Source code on GitHub")
 
 Updates a path's vertex
 
@@ -67,7 +75,7 @@ Updates a path's vertex
 
 ## get
 
-[index.js:94-102](https://github.com/wanderer/functional-dag/blob/d522d82d6eb0e39471ce61cd5225a49c689ac529/index.js#L94-L102 "Source code on GitHub")
+[index.js:101-109](https://github.com/wanderer/functional-trie/blob/77f6650eaf21cf613e74bd94aae3cc72b9b57e8c/index.js#L101-L109 "Source code on GitHub")
 
 get a vertex given a path
 
@@ -77,7 +85,7 @@ get a vertex given a path
 
 ## walkPath
 
-[index.js:108-118](https://github.com/wanderer/functional-dag/blob/d522d82d6eb0e39471ce61cd5225a49c689ac529/index.js#L108-L118 "Source code on GitHub")
+[index.js:115-125](https://github.com/wanderer/functional-trie/blob/77f6650eaf21cf613e74bd94aae3cc72b9b57e8c/index.js#L115-L125 "Source code on GitHub")
 
 walks along a path. Implemented as an itorator that returns
 `[edge name, vertex]` on each found edge.
@@ -88,7 +96,7 @@ walks along a path. Implemented as an itorator that returns
 
 ## del
 
-[index.js:125-139](https://github.com/wanderer/functional-dag/blob/d522d82d6eb0e39471ce61cd5225a49c689ac529/index.js#L125-L139 "Source code on GitHub")
+[index.js:132-146](https://github.com/wanderer/functional-trie/blob/77f6650eaf21cf613e74bd94aae3cc72b9b57e8c/index.js#L132-L146 "Source code on GitHub")
 
 deletes an Edge at a given path
 
@@ -100,7 +108,7 @@ Returns **Vertex**
 
 ## copy
 
-[index.js:145-147](https://github.com/wanderer/functional-dag/blob/d522d82d6eb0e39471ce61cd5225a49c689ac529/index.js#L145-L147 "Source code on GitHub")
+[index.js:152-154](https://github.com/wanderer/functional-trie/blob/77f6650eaf21cf613e74bd94aae3cc72b9b57e8c/index.js#L152-L154 "Source code on GitHub")
 
 Creates an copy of the current Vertex
 
