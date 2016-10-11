@@ -11,13 +11,8 @@
     "build:docs": "documentation build --github  -f md ./index.js > ./docs/index.md"
   },
   "keywords": [
-    "directed graph",
-    "dag",
-    "DAG",
-    "acyclic",
-    "acyclic graph",
     "functional",
-    "graph"
+    "trie"
   ],
   "author": "mjbecze <mjbecze@gmail.com>",
   "license": "MPL-2.0",
