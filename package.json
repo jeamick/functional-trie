@@ -1,0 +1,38 @@
+{
+  "name": "functional-trie",
+  "version": "2.0.1",
+  "description": "a Functional Trie",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "istanbul cover ./test/index.js",
+    "coveralls": "npm run coverage && coveralls <coverage/lcov.info",
+    "lint": "standard && documentation lint ./index.js",
+    "test": "tape ./test/index.js",
+    "build:docs": "documentation build --github  -f md ./index.js > ./docs/index.md"
+  },
+  "keywords": [
+    "directed graph",
+    "dag",
+    "DAG",
+    "acyclic",
+    "acyclic graph",
+    "functional",
+    "graph"
+  ],
+  "author": "mjbecze <mjbecze@gmail.com>",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.4.1",
+    "standard": "^6.0.8",
+    "tape": "^4.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wanderer/functional-trie.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wanderer/functional-trie/issues"
+  },
+  "homepage": "https://github.com/wanderer/functional-trie"
+}
