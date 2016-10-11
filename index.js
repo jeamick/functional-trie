@@ -152,6 +152,16 @@ module.exports = class Vertex {
   copy () {
     return new Vertex(this._value, new Map(this._edges))
   }
+
+  /**
+   * Does a depth first iteration of the graph
+   */
+  * [Symbol.iterator ] () {
+    yield this
+    for (let vertex of this._edges) {
+      yield * vertex[1]
+    }
+  }
 }
 
 function formatPath (path) {

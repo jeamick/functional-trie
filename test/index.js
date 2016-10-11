@@ -15,12 +15,16 @@ tape('basic', function (t) {
   const leaf2 = root.get(path)
   t.equals(leaf2.value, value, 'set and get should work')
 
+
   const leafRoot = leaf2.root
   t.equals(leafRoot, root, 'should return the root')
 
   v3 = root.get(path[0])
 
   t.equals(v3.value, value, 'set and get should work for single path')
+
+  const nodes = [...root]
+  t.equals(nodes.length, 4, 'should iterate through the nodesjs')
 
   let pathNodes = [...root.walkPath(path)]
   t.equals(pathNodes.length, 4, 'path length should be 4')
