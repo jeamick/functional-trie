@@ -15,7 +15,6 @@ tape('basic', function (t) {
   const leaf2 = root.get(path)
   t.equals(leaf2.value, value, 'set and get should work')
 
-
   const leafRoot = leaf2.root
   t.equals(leafRoot, root, 'should return the root')
 
