@@ -2,7 +2,7 @@
 const tape = require('tape')
 const Vertex = require('../')
 
-tape('basic', function (t) {
+tape('basic', t => {
   let root = new Vertex()
   const path = ['one', 'two', 'three']
   const value = 'this is a leaf'
@@ -46,3 +46,20 @@ tape('basic', function (t) {
   t.end()
 })
 
+tape('update async', t => {
+  let root = new Vertex()
+  const path = ['one', 'two', 'three']
+  const value = 'this is a leaf'
+  const newValue = 'this is a new value'
+  const leaf = new Vertex(value)
+  root = root.set(path, leaf)
+
+  root.updateAsync(path, (vertex, update) => {
+    t.equals(vertex.value, value, 'the value should be teh same')
+    vertex.value = newValue
+    const updatedTrie = update(vertex)
+    vertex = updatedTrie.get(path)
+    t.equals(vertex.value, newValue, 'should have the new value')
+    t.end()
+  })
+})

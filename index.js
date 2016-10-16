@@ -20,6 +20,10 @@ module.exports = class Vertex {
     return this._value
   }
 
+  set value (val) {
+    this._value = val
+  }
+
   /**
    * @property {*} the edges of the vertex
    */
@@ -51,7 +55,7 @@ module.exports = class Vertex {
    * @param {Vertex} vertex
    */
   set (path, newVertex) {
-    return this.update(path, (vertex) => {
+    return this.update(path, vertex => {
       vertex._value = newVertex._value
       vertex._edges = newVertex._edges
       return vertex
@@ -65,6 +69,24 @@ module.exports = class Vertex {
    * and returns the updated `Vertex`
    */
   update (path, func) {
+    let [nextVertex, vertex, top, edge] = this._updatePath(path)
+    nextVertex = func(nextVertex)
+    vertex._edges.set(edge, nextVertex)
+    nextVertex._parent = vertex
+
+    return top
+  }
+
+  updateAsync (path, updateCb) {
+    const [nextVertex, vertex, top, edge] = this._updatePath(path)
+    updateCb(nextVertex, updatedVertex => {
+      vertex._edges.set(edge, updatedVertex)
+      updatedVertex._parent = vertex
+      return top
+    })
+  }
+
+  _updatePath (path) {
     path = formatPath(path)
     let top, edge, nextVertex
     let vertex = top = this.copy()
@@ -87,11 +109,8 @@ module.exports = class Vertex {
     if (!nextVertex) {
       nextVertex = new Vertex()
     }
-    nextVertex = func(nextVertex)
-    vertex._edges.set(edge, nextVertex)
-    nextVertex._parent = vertex
 
-    return top
+    return [nextVertex, vertex, top, edge]
   }
 
   /**
