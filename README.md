@@ -5,7 +5,7 @@
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)  
 
-This is a Functional Directed Acyclic Trie implementation. [generic-digraph](https://github.com/wanderer/generic-digraph) is the imperative version. 
+This is a Functional Trie implementation. [imerative-trie](https://github.com/wanderer/imperative-trie) is the imperative version. 
 
 # USAGE
 
