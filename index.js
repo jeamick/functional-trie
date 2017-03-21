@@ -2,7 +2,6 @@
  * A very generic functional trie implemention
  */
 module.exports = class Vertex {
-
   /**
    * Create a new vertex
    * @param {*} value the value that the vertex holds
