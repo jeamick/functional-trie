@@ -20,7 +20,7 @@
     "coveralls": "^2.11.4",
     "documentation": "^4.0.0-beta11",
     "istanbul": "^0.4.1",
-    "standard": "^9.0.2",
+    "standard": "^10.0.0",
     "tape": "^4.0.3"
   },
   "repository": {
